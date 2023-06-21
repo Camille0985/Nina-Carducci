@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" itemscope itemtype="http://schema.org/Article">
 <head>
+	<title>Nina Carducci Photographe Professionnelle</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos">
-	<meta property="og:image" content=""/>
+	<meta name="description" content="Photographe professionnelle, je me déplace en Île-de-France pour vos shooting photos, retouches et album photos afin de capturer vos moments les plus précieux">
+
+	<!-- Google+ -->
+	<meta itemprop="name" content="Nina Carducci, Photographe Professionnelle">
+	<meta itemprop="description" content="Photographe professionnelle pour toutes vos retouches photos, shooting et albums">
+	<meta itemprop="image" content="./assets/images/nina.png">
 
 	<!-- Open Graph data -->
 	<meta property="og:title" content="Nina Carducci, Photographe Professionnelle"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:url" content="https://nina-carducci.github.io/"/>
-	<meta property="og:image" content="https://nina-carducci.github.io/assets/images/nina.png"/>
-	<meta property="og:description" content="Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos"/>
+	<meta property="og:image" content="./assets/images/nina.png"/>
+	<meta property="og:description" content="Photographe professionnelle, je me déplace en Île-de-France pour vos shooting photos, retouches et album photos afin de capturer vos moments les plus précieux"/>
+
+	<!-- Twitter card data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@publisher_handle">
+	<meta name="twitter:title" content="Nina Carducci, Photographe Professionnelle">
+	<meta name="twitter:description" content="Photographe professionnelle, je me déplace en Île-de-France pour vos shooting photos, retouches et album photos afin de capturer vos moments les plus précieux">
+	<meta name="twitter:creator" content="@author_handle">
+	<meta name="twitter:image:src" content="./assets/images/nina.png"/>
 
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" defer>
 	<link rel="stylesheet" href="./assets/style.css">
@@ -18,15 +31,40 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
 	<meta charset="UTF-8">
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "LocalBusiness",
+            "name": "Nina Carducci",
+			"image": [
+			"./assets/images/nina.jpg",
+			"./assets/images/gallery/mariage/jakob-owens.jpg"
+			],
+            "description": "Nina Carducci, photographe professionnelle, shooting photo, retouches, album photos",
+			"priceRange": "50€ - 400€",
+            "telephone": "05 56 67 78 89",
+			"openingHours": "Mo, Tu, We, Th, Fr 10:00-19:00",
+			"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "68 avenue Alsace-Lorraine",
+			"addressLocality": "Bordeaux",
+			"addressRegion": "Nouvelle-Aquitaine",
+			"postalCode": "33200",
+			"addressCountry": "FR"
+			}
+						
+		}
+	</script>
+
 	<script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery.js"></script>
 	<script src="./assets/scripts.js"></script>
-	<title>Nina Carducci Photographe Professionnelle</title>
 </head>
+
 <body>
 <div class="top-header">
-	<h1 class="name">Nina Carducci</h1> <!---remplacement h3 par h1-->
+	<h1 class="name"><a href="index.html">Nina Carducci</a></h1>
 	<div class="nav">   
 		<ul>
 			<li><a href="#about">À propos</a></li>
@@ -70,18 +108,16 @@
 		<img src="./assets/images/nina.jpg" alt="Nina Carducci">
 	</div>
 	<div id="about-me">
-		<h2 class="about-me__title">A propos de moi</h2>
-		<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. <br> Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</p>
-		<!--modification h6 en span .about-me_introduction ajout br retour à la ligne-->	
+		<h2 class="about-me_title">A propos de moi</h2>
+		<p class="about-me_introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. <br> Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</p>	
 		<p class="about-me_content">Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.</p>
 		<p class="about-me_content">C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
-		<!--Division du 2eme paragraphe en 2, ajout classe "about-me_content"-->
 	</div>
 </div>
-<div id="gallery-container"> <!--remplacement #gallery par id unique-->
+<div id="gallery">
 	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
-		<div class="gallery"> <!---supression du style display none-->
+		<div class="gallery">
 			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul.jpg" alt="aaron paul"/>
 			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou.jpg" alt="ali morshedlou"/>
 			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman.jpg" alt="jason goodman"/>
@@ -97,7 +133,6 @@
 		<figure>
 			<blockquote>
 				<p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</>
-			<!----remplacement h1 par paragraphe--->
 			</blockquote>
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
@@ -143,7 +178,6 @@
 	<figure>
 		<blockquote>
 			<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
-		<!----remplacement h1 par paragraphe--->
 		</blockquote>
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>

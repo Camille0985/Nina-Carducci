@@ -21,6 +21,7 @@ body {
 
 .nav ul {
 	display: flex;
+	flex-wrap: wrap;
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
@@ -28,11 +29,13 @@ body {
 
 .nav li {
 	padding-inline: 10px;
+	flex: 1 0 auto;
 }
 
-.nav a {
+a, a:hover, .nav-link{
 	text-decoration: none;
-	color: #000
+	color: #000;
+	cursor: pointer;
 }
 
 #instagram-logo {
@@ -69,23 +72,16 @@ body {
 	flex: 2;
 }
 
-.about-me__title {
-	margin-top: 15px; /*modif 1em > 15px */
-	margin-bottom: 40px; /* modif 60px > 40px*/
-	/* font-size: 30px; supression taille pour h3*/
+.about-me_title {
+	margin-top: 15px;
+	margin-bottom: 40px;
 }
-.about-me__introduction {
+.about-me_introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
-	font-size: 19px; /*ajout taille*/
-	width: 100%; /*modif largeur de % en px*/
-}
-
-.about-me_content {
-	margin-top: 15px; /*ajout marge top*/
-	width: 780px; /*modif largeur de % en px*/
-	font-size: 15px; /* modif taille 14 à 15*/
+	font-size: 19px;
+	width: 100%;
 }
 
 .title{
@@ -125,13 +121,13 @@ body {
 
 .gallery-items-row{
 	width: 100%;
-	height: 100%; /*définition d'une large et hauteur à 100%*/
+	height: 100%;
 }
 
 .gallery-item {
 	position: absolute;
 	width: 100%;
-	height: 100%; /*définition d'une large et hauteur à 100%*/
+	height: 100%;
 	object-fit: cover;
 	padding: .5em;
 }
@@ -158,8 +154,7 @@ body {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-	font-size: 25px; /* ajout taille texte*/
-
+	font-size: 25px;
 }
 .quote__author {
 	font-family: Spectral;
@@ -213,6 +208,13 @@ body {
 #contact .container {
 	display: flex;
 }
+
+.picture img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+  }
+  
 .picture.right::before {
 	content: ' ';
 	background-color: #BEB45A;
@@ -276,16 +278,11 @@ input[type="submit"] {
 	.top-header{
 		width: 100%;
 	}
-	.nav{
-		width: 100%; /*ajout width pour affichage sans retour à la ligne*/
-	}
 
 	#about{
 		flex-direction: column;
 	}
-	.picture {
-		width: 50%;
-	}
+
 	.picture.left::before {
 		width: 100%;
 		height: 30%;
@@ -352,6 +349,7 @@ input[type="submit"] {
 		text-align: center;
 	}
 	.picture.left::before, .picture.right::before {
+		width: 100%;
 		height: 150px;
 	}
 	#services .container {
